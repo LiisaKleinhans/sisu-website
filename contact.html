@@ -19,7 +19,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav aria-label="Main"><ul class="menu" id="menu">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a class="menu-cta" href="contact.html#book">Book a chat</a></li>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Me</a></li><li><a href="services.html">Services</a></li><li><a class="menu-cta" href="contact.html#book" aria-current="page">Contact</a></li>
     </ul></nav>
   </div>
 </header>
@@ -42,19 +42,36 @@
   </div>
   <div class="contact" id="contact-card">
     <h3>Book a 30-minute conversation</h3>
-    <p>Email or call Liisa to book a no-obligation chat.</p>
+    <p>Leave your details and Liisa will be in touch to arrange a time.</p>
+    <form class="enquiry" id="enquiry" action="https://formsubmit.co/liisa@growwithsisu.com" method="POST">
+      <input type="hidden" name="_subject" value="New website enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="Name" required autocomplete="name"></div>
+      <div class="field-row">
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="Phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="f-for">This is for</label>
+        <select id="f-for" name="This is for">
+          <option>Myself</option><option>My team</option><option>Leaders or managers in my business</option><option>My organisation</option><option>Not sure yet</option>
+        </select></div>
+      <div class="field"><label for="f-msg">How can Liisa help?</label><textarea id="f-msg" name="Message" rows="4" required placeholder="A few lines is plenty. We'll talk through the details in our conversation."></textarea></div>
+      <button class="btn" type="submit">Send message</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
     <div class="reach">
+      <span class="k">Or contact Liisa directly</span>
       <div class="reach-row">
-        <div><span class="k">Email</span><a href="mailto:liisa@growwithsisu.com?subject=Booking%20a%2030-minute%20conversation">liisa@growwithsisu.com</a></div>
+        <a href="mailto:liisa@growwithsisu.com">liisa@growwithsisu.com</a>
         <button class="copy" type="button" data-copy="liisa@growwithsisu.com">Copy</button>
       </div>
       <div class="reach-row">
-        <div><span class="k">Phone</span><a href="tel:+27824148378">+27 82 414 8378</a></div>
+        <a href="tel:+27824148378">+27 82 414 8378</a>
         <button class="copy" type="button" data-copy="+27 82 414 8378">Copy</button>
       </div>
     </div>
-    <a class="btn" href="mailto:liisa@growwithsisu.com?subject=Booking%20a%2030-minute%20conversation">Send an email</a>
-    <p class="hint">The button opens your email app. If nothing happens, copy the address above and paste it into your email.</p>
     <p class="reg">Liisa Kleinhans, Industrial Psychologist · HPCSA PS 0150355</p>
   </div>
 </section>
