@@ -80,12 +80,12 @@ document.getElementById("lanes").innerHTML = GROUPS.map((g,i) => `
         <h4>${esc(it.name)}</h4>
         <p class="line">${esc(it.line)}</p>
         <div class="tags">${it.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-        ${it.link ? `<a class="detail-link" href="${it.link}">See ${esc(it.name)} in detail →</a>` : ''}
         <details class="more"><summary>Read more</summary>
           <div class="detail">
             ${it.note ? `<p class="note">${esc(it.note).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")}</p>` : ''}
             <p class="best"><b>Who it's for:</b> ${esc(it.best)}</p>
             ${it.subs.map(s=>`<div class="sub"><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join("")}
+            ${it.link ? `<a class="detail-link" href="${it.link}">See ${esc(it.name)} in detail →</a>` : ''}
           </div>
         </details>
       </article>`).join("")}

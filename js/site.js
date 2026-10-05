@@ -44,7 +44,6 @@ document.querySelectorAll('[data-copy]').forEach(function(b){
   form.addEventListener('submit',function(e){
     if(!window.fetch) return; // very old browsers: normal form post
     e.preventDefault();
-    if(form._honey && form._honey.value) return;
     btn.disabled=true; btn.textContent='Sending…'; status.className='form-status'; status.textContent='';
     fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
       .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})

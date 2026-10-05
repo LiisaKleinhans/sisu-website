@@ -194,8 +194,8 @@ blockquote{margin:6px 0;padding:14px 18px;border-left:3px solid var(--cloudberry
 /* Service detail pages */
 .back{align-self:flex-start;font-weight:600;font-size:.95rem;text-decoration:none;color:var(--lake);margin-bottom:-48px}
 .back:hover{text-decoration:underline}
-.detail-link{font-weight:600;font-size:.9rem;color:var(--pine);text-decoration:none;background:var(--lane-wash);border-radius:99px;padding:6px 12px;align-self:flex-start}
-.detail-link:hover{text-decoration:underline}
+.detail-link{font-weight:600;font-size:.9rem;color:var(--pine);text-decoration:none;background:transparent;border:1.5px solid var(--pine);border-radius:99px;padding:7px 14px;align-self:flex-start;margin-top:4px}
+.detail-link:hover{background:var(--lane-wash)}
 
 /* Contact form */
 .enquiry{display:flex;flex-direction:column;gap:14px}
